@@ -14,19 +14,15 @@ extension StatusCode on Response<dynamic> {
 
     _mapToThrowException();
 
-    if (isRedirectError) {
-      return Left(StatusCodeFailure.errors300(statusCode!, data));
+    if (isOtherError) {
+      return Left(StatusCodeFailure(statusCode!, data, {
+        'path': requestOptions.path,
+        'method': requestOptions.method,
+        'queryParameters': requestOptions.queryParameters,
+        'data': requestOptions.data,
+        'headers': requestOptions.headers,
+      }));
     }
-
-    if (isClientError) {
-      return Left(StatusCodeFailure.errors400(statusCode!, data));
-    }
-
-    if (isServerError) {
-      return Left(StatusCodeFailure.errors500(statusCode!, data));
-    }
-
-    if (isOtherError) return Left(StatusCodeFailure.other(statusCode!, data));
 
     return right(dataDecode);
   }

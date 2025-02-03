@@ -22,7 +22,9 @@ mixin _$RequestEntry {
   Map<String, dynamic>? get queryParameters =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RequestEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RequestEntryCopyWith<RequestEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +52,8 @@ class _$RequestEntryCopyWithImpl<$Res, $Val extends RequestEntry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RequestEntry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,6 +103,8 @@ class __$$RequestEntryImplCopyWithImpl<$Res>
       _$RequestEntryImpl _value, $Res Function(_$RequestEntryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RequestEntry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,7 +193,9 @@ class _$RequestEntryImpl extends _RequestEntry {
       const DeepCollectionEquality().hash(_customHeaders),
       const DeepCollectionEquality().hash(_queryParameters));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RequestEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RequestEntryImplCopyWith<_$RequestEntryImpl> get copyWith =>
@@ -202,15 +210,18 @@ abstract class _RequestEntry extends RequestEntry {
   const _RequestEntry._() : super._();
 
   @override
-  Path get path;
-  @override //   String? token,
+  Path get path; //   String? token,
+  @override
   Object? get body;
   @override
   Map<String, String>? get customHeaders;
   @override
   Map<String, dynamic>? get queryParameters;
+
+  /// Create a copy of RequestEntry
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RequestEntryImplCopyWith<_$RequestEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

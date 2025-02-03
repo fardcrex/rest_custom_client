@@ -58,12 +58,14 @@ mixin _$RequestOutput<D> {
 
 /// @nodoc
 abstract class $RequestOutputCopyWith<D, $Res> {
-  factory $RequestOutputCopyWith(RequestOutput<D> value, $Res Function(RequestOutput<D>) then) =
+  factory $RequestOutputCopyWith(
+          RequestOutput<D> value, $Res Function(RequestOutput<D>) then) =
       _$RequestOutputCopyWithImpl<D, $Res, RequestOutput<D>>;
 }
 
 /// @nodoc
-class _$RequestOutputCopyWithImpl<D, $Res, $Val extends RequestOutput<D>> implements $RequestOutputCopyWith<D, $Res> {
+class _$RequestOutputCopyWithImpl<D, $Res, $Val extends RequestOutput<D>>
+    implements $RequestOutputCopyWith<D, $Res> {
   _$RequestOutputCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -77,16 +79,19 @@ class _$RequestOutputCopyWithImpl<D, $Res, $Val extends RequestOutput<D>> implem
 
 /// @nodoc
 abstract class _$$SuccessDataImplCopyWith<D, $Res> {
-  factory _$$SuccessDataImplCopyWith(_$SuccessDataImpl<D> value, $Res Function(_$SuccessDataImpl<D>) then) =
+  factory _$$SuccessDataImplCopyWith(_$SuccessDataImpl<D> value,
+          $Res Function(_$SuccessDataImpl<D>) then) =
       __$$SuccessDataImplCopyWithImpl<D, $Res>;
   @useResult
   $Res call({D data});
 }
 
 /// @nodoc
-class __$$SuccessDataImplCopyWithImpl<D, $Res> extends _$RequestOutputCopyWithImpl<D, $Res, _$SuccessDataImpl<D>>
+class __$$SuccessDataImplCopyWithImpl<D, $Res>
+    extends _$RequestOutputCopyWithImpl<D, $Res, _$SuccessDataImpl<D>>
     implements _$$SuccessDataImplCopyWith<D, $Res> {
-  __$$SuccessDataImplCopyWithImpl(_$SuccessDataImpl<D> _value, $Res Function(_$SuccessDataImpl<D>) _then)
+  __$$SuccessDataImplCopyWithImpl(
+      _$SuccessDataImpl<D> _value, $Res Function(_$SuccessDataImpl<D>) _then)
       : super(_value, _then);
 
   /// Create a copy of RequestOutput
@@ -127,7 +132,8 @@ class _$SuccessDataImpl<D> extends SuccessData<D> {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
   /// Create a copy of RequestOutput
   /// with the given fields replaced by the non-null parameter values.
@@ -135,7 +141,8 @@ class _$SuccessDataImpl<D> extends SuccessData<D> {
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessDataImplCopyWith<D, _$SuccessDataImpl<D>> get copyWith =>
-      __$$SuccessDataImplCopyWithImpl<D, _$SuccessDataImpl<D>>(this, _$identity);
+      __$$SuccessDataImplCopyWithImpl<D, _$SuccessDataImpl<D>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -209,12 +216,14 @@ abstract class SuccessData<D> extends RequestOutput<D> {
   /// Create a copy of RequestOutput
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessDataImplCopyWith<D, _$SuccessDataImpl<D>> get copyWith => throw _privateConstructorUsedError;
+  _$$SuccessDataImplCopyWith<D, _$SuccessDataImpl<D>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<D, $Res> {
-  factory _$$ErrorImplCopyWith(_$ErrorImpl<D> value, $Res Function(_$ErrorImpl<D>) then) =
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl<D> value, $Res Function(_$ErrorImpl<D>) then) =
       __$$ErrorImplCopyWithImpl<D, $Res>;
   @useResult
   $Res call({StatusCodeFailure err});
@@ -223,9 +232,12 @@ abstract class _$$ErrorImplCopyWith<D, $Res> {
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<D, $Res> extends _$RequestOutputCopyWithImpl<D, $Res, _$ErrorImpl<D>>
+class __$$ErrorImplCopyWithImpl<D, $Res>
+    extends _$RequestOutputCopyWithImpl<D, $Res, _$ErrorImpl<D>>
     implements _$$ErrorImplCopyWith<D, $Res> {
-  __$$ErrorImplCopyWithImpl(_$ErrorImpl<D> _value, $Res Function(_$ErrorImpl<D>) _then) : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl<D> _value, $Res Function(_$ErrorImpl<D>) _then)
+      : super(_value, _then);
 
   /// Create a copy of RequestOutput
   /// with the given fields replaced by the non-null parameter values.
@@ -357,5 +369,6 @@ abstract class Error<D> extends RequestOutput<D> {
   /// Create a copy of RequestOutput
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<D, _$ErrorImpl<D>> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<D, _$ErrorImpl<D>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
